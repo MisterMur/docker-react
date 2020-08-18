@@ -4,7 +4,7 @@ services:
     - docker
 
 before_install:
-    - docker build -t mistermur/docker-react -f Dockerfile.dev .
+    - docker build -t mistermur/docker-react -f Dockerfile.prod .
 
 script:
     - docker run -e CI=true mistermur/docker-react npm run test
